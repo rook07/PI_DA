@@ -4,6 +4,8 @@
 Este proyecto tiene como objetivo analizar el estado de la conectividad en Argentina a partir de datos abiertos proporcionados por el Ente Nacional de Comunicaciones (ENACOM). Se estudian diversos aspectos como el acceso a Internet, la penetración por tecnología y los ingresos del sector. Con esta información, se busca generar insights clave para la toma de decisiones estratégicas, especialmente para una empresa de tecnología interesada en invertir en el país.
 
 ## Fuentes de Datos Utilizadas
+
+
 Los datos provienen de [ENACOM - Datos Abiertos](https://indicadores.enacom.gob.ar/datos-abiertos) e incluyen las siguientes categorías:
 - **Accesos a Internet por Rango de Velocidad** (provincial y total)
 - **Accesos a Internet por Tecnología** (ADSL, Cablemódem, Fibra óptica, Wireless, Otros)
@@ -11,6 +13,7 @@ Los datos provienen de [ENACOM - Datos Abiertos](https://indicadores.enacom.gob.
 - **Ingresos del Sector de Internet, Telefonía Fija, Telefonía Móvil y TV por Suscripción**
 - **Velocidad Media de Descarga de Internet (Mbps)**
 - **Datos del Censo Nacional** (población por provincia)
+Se recomienda utilizar el diccionario de datos para obtener una mejor comprension en el siguiente link :https://docs.google.com/document/d/1BYW0vT_DNIjjKM9v4hNg5KmqjRNOc7OBB1jCXc80gnI/edit?tab=t.0#heading=h.hjukififf3ol
 
 ## Librerías Utilizadas
 El análisis y procesamiento de los datos se realizaron con las siguientes librerías en Python:
@@ -21,6 +24,26 @@ El análisis y procesamiento de los datos se realizaron con las siguientes libre
 - `openpyxl` (Exportación de datos a Excel para Power BI)
 - `os` (Manejo de archivos y directorios)
 
+## Anlisis##
+1- Evolución y Crecimiento del Acceso a Internet 📈
+Se observa una tendencia al aumento de accesos a velocidades más altas (más de 10 Mbps) con el tiempo.
+Los accesos de baja velocidad (hasta 512 kbps y entre 512 kbps - 1 Mbps) han disminuido significativamente, reflejando una migración hacia mejores servicios.
+La media de accesos en todos los rangos ha crecido en el tiempo, con una expansión notable en las velocidades superiores a 30 Mbps.
+2️- Penetración del Servicio por Población 🏡
+En promedio, hay 19,2 accesos por cada 100 habitantes, aunque con grandes diferencias entre provincias (mínimo de 7,69 y máximo de 50,35).
+Provincias con menor penetración podrían beneficiarse de programas de expansión de infraestructura.
+3️- Diferencias por Tecnología 💡
+Fibra óptica ha crecido a un ritmo acelerado, aunque sigue siendo superada por Cablemodem, que domina el mercado con una media de 5,7 millones de accesos.
+ADSL está en declive, lo que indica que los usuarios están migrando a tecnologías más rápidas.
+Wireless sigue siendo un nicho, con una media de 513k accesos, pero podría ser clave en zonas rurales.
+4️- Desafíos en la Distribución de Velocidades ⚖️
+Mientras que algunas provincias tienen velocidades de más de 50 Mbps en promedio, otras siguen con velocidades mucho más bajas.
+Hay una gran desigualdad en el acceso a internet de alta velocidad, lo que podría afectar la inclusión digital y el desarrollo económico de ciertas regiones.
+5️- Ingresos en el Sector 💰
+Los ingresos por servicios de internet han crecido, con una media de 103 mil millones de pesos por trimestre, pero con una gran variabilidad.
+Existe una fuerte correlación entre el crecimiento de usuarios de alta velocidad y el aumento de ingresos.
+El crecimiento de más de 30 Mbps es el que más impulsa los ingresos, indicando que los usuarios están dispuestos a pagar por mejor servicio.
+
 ## Insights Clave del Análisis
 1. **Crecimiento de usuarios de alta velocidad y aumento de ingresos:** Existe una fuerte correlación entre la cantidad de accesos de alta velocidad (>30 Mbps) y los ingresos generados en el sector de Internet.
 2. **Disparidad regional en la conectividad:** Algunas provincias presentan menor penetración de Internet, lo que representa una oportunidad de expansión para nuevos inversores.
@@ -28,13 +51,11 @@ El análisis y procesamiento de los datos se realizaron con las siguientes libre
 4. **Relación entre penetración de Internet y densidad poblacional:** Las provincias con mayor población tienden a tener mejor acceso y mayor variedad de tecnologías.
 5. **Diferencias en ingresos por segmento:** Mientras que los ingresos de Internet han crecido, los ingresos por telefonía fija muestran una tendencia a la baja.
 
-## KPIs Planteados
-Para evaluar el mercado y el potencial de inversión, se definieron los siguientes indicadores clave:
-- **Accesos a Internet por cada 100 hogares** (evaluar penetración)
-- **Accesos por rango de velocidad** (medir el cambio en la demanda de velocidades más altas)
-- **Ingresos generados por segmento** (Internet, Telefonía fija, TV por suscripción, Móvil)
-- **Variación de tecnologías de acceso** (identificar tendencias y oportunidades de inversión)
-- **Velocidad Media de Descarga por Provincia** (determinar la calidad del servicio en cada región)
+## KPIs clave para evaluar el crecimiento y desempeño del sector de telecomunicaciones en Argentina.
+KPI	Descripción	Objetivo
+KPI 1: Crecimiento de Accesos a Internet	Mide el crecimiento de accesos a Internet en cada provincia en comparación con el trimestre anterior.	Aumentar un 2% el acceso a Internet por cada 100 hogares en el próximo trimestre.
+KPI 2: Relación entre Ingresos y Usuarios de Alta Velocidad	Evalúa la contribución de los accesos de más de 30 Mbps a los ingresos del sector.	Identificar cómo el crecimiento de usuarios de alta velocidad impacta en los ingresos y garantizar su aumento sostenido.
+KPI 3: Crecimiento de Accesos por Rango de Velocidad	Analiza el aumento de accesos en cada rango de velocidad para entender tendencias de adopción tecnológica.	Monitorear el incremento de accesos en velocidades superiores a 10 Mbps y evaluar el impacto en el mercado.
 
 ## Conclusiones y Recomendaciones
 - **Expansión de la fibra óptica:** La inversión en infraestructura de fibra óptica es clave, ya que es la tecnología con mayor crecimiento y demanda en el mercado.
@@ -42,10 +63,8 @@ Para evaluar el mercado y el potencial de inversión, se definieron los siguient
 - **Diversificación de oferta y mejoras en velocidad:** Implementar planes de acceso a Internet con velocidades mayores para adaptarse a la tendencia de consumo.
 - **Evaluación de ingresos por tecnología:** Para garantizar una inversión rentable, es clave analizar la relación entre accesos y los ingresos que generan por cada tecnología.
 
+
+
 ## Próximos Pasos
 - Creación de un dashboard interactivo en Power BI para visualizar las tendencias y el impacto de la conectividad en Argentina.
 - Comparación con datos internacionales para entender la posición de Argentina en el mercado global de telecomunicaciones.
-
----
-© 2025 - Proyecto de Análisis de Conectividad en Argentina
-
