@@ -1,0 +1,51 @@
+# Análisis de Conectividad y Mercado de Telecomunicaciones en Argentina
+
+## Descripción del Proyecto
+Este proyecto tiene como objetivo analizar el estado de la conectividad en Argentina a partir de datos abiertos proporcionados por el Ente Nacional de Comunicaciones (ENACOM). Se estudian diversos aspectos como el acceso a Internet, la penetración por tecnología y los ingresos del sector. Con esta información, se busca generar insights clave para la toma de decisiones estratégicas, especialmente para una empresa de tecnología interesada en invertir en el país.
+
+## Fuentes de Datos Utilizadas
+Los datos provienen de [ENACOM - Datos Abiertos](https://indicadores.enacom.gob.ar/datos-abiertos) e incluyen las siguientes categorías:
+- **Accesos a Internet por Rango de Velocidad** (provincial y total)
+- **Accesos a Internet por Tecnología** (ADSL, Cablemódem, Fibra óptica, Wireless, Otros)
+- **Penetración de Internet por Habitantes y Hogares**
+- **Ingresos del Sector de Internet, Telefonía Fija, Telefonía Móvil y TV por Suscripción**
+- **Velocidad Media de Descarga de Internet (Mbps)**
+- **Datos del Censo Nacional** (población por provincia)
+
+## Librerías Utilizadas
+El análisis y procesamiento de los datos se realizaron con las siguientes librerías en Python:
+- `pandas` (Manipulación de datos)
+- `numpy` (Cálculos numéricos)
+- `matplotlib` (Visualización gráfica)
+- `seaborn` (Gráficos estadísticos y matriz de correlación)
+- `openpyxl` (Exportación de datos a Excel para Power BI)
+- `os` (Manejo de archivos y directorios)
+
+## Insights Clave del Análisis
+1. **Crecimiento de usuarios de alta velocidad y aumento de ingresos:** Existe una fuerte correlación entre la cantidad de accesos de alta velocidad (>30 Mbps) y los ingresos generados en el sector de Internet.
+2. **Disparidad regional en la conectividad:** Algunas provincias presentan menor penetración de Internet, lo que representa una oportunidad de expansión para nuevos inversores.
+3. **Tendencia creciente en fibra óptica:** La tecnología de fibra óptica muestra un aumento constante en su adopción, desplazando a ADSL y Wireless.
+4. **Relación entre penetración de Internet y densidad poblacional:** Las provincias con mayor población tienden a tener mejor acceso y mayor variedad de tecnologías.
+5. **Diferencias en ingresos por segmento:** Mientras que los ingresos de Internet han crecido, los ingresos por telefonía fija muestran una tendencia a la baja.
+
+## KPIs Planteados
+Para evaluar el mercado y el potencial de inversión, se definieron los siguientes indicadores clave:
+- **Accesos a Internet por cada 100 hogares** (evaluar penetración)
+- **Accesos por rango de velocidad** (medir el cambio en la demanda de velocidades más altas)
+- **Ingresos generados por segmento** (Internet, Telefonía fija, TV por suscripción, Móvil)
+- **Variación de tecnologías de acceso** (identificar tendencias y oportunidades de inversión)
+- **Velocidad Media de Descarga por Provincia** (determinar la calidad del servicio en cada región)
+
+## Conclusiones y Recomendaciones
+- **Expansión de la fibra óptica:** La inversión en infraestructura de fibra óptica es clave, ya que es la tecnología con mayor crecimiento y demanda en el mercado.
+- **Foco en provincias con baja penetración:** Existen oportunidades de expansión en regiones con menor acceso a Internet de alta velocidad.
+- **Diversificación de oferta y mejoras en velocidad:** Implementar planes de acceso a Internet con velocidades mayores para adaptarse a la tendencia de consumo.
+- **Evaluación de ingresos por tecnología:** Para garantizar una inversión rentable, es clave analizar la relación entre accesos y los ingresos que generan por cada tecnología.
+
+## Próximos Pasos
+- Creación de un dashboard interactivo en Power BI para visualizar las tendencias y el impacto de la conectividad en Argentina.
+- Comparación con datos internacionales para entender la posición de Argentina en el mercado global de telecomunicaciones.
+
+---
+© 2025 - Proyecto de Análisis de Conectividad en Argentina
+
